@@ -14,9 +14,11 @@ module.exports = {
       },
       colors: {
 
-          sandtan : '#e1b382',
-          nightblue: '#2d545e',
-    
+          sandtan : '#FBEEC1',
+          nightblue: '#659dbd',
+          leafgreen: '#8d8741',
+          otherblue: '#2d545e',
+          othertan: '#e1b382',
 
 
       },

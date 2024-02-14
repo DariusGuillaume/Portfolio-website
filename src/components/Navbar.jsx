@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import {useState} from 'react'
 import Image from 'next/image'
+import NavLink from './NavLink';
 
 const links = [
 {url: '/', title: 'Home'},
@@ -17,23 +18,23 @@ const links = [
 const Navbar = () => {
   const [open,setOpen] = useState(false);
   return (
-    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48"> 
-<div className='hidden md:flex gap-4'>
+    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl"> 
+<div className='hidden md:flex gap-4 w-1/3'>
     {links.map((link) => (
-      <Link href ={link.url} key ={link.title}> {link.title} </Link>  ))}
+    <NavLink link={link} key={link.title} />))}
         
 </div>
    
     {/* LOGO */}
-    <div className="md:hidden"> 
-    <Link href = "/" className=" bg-sandtan w-10 h-10 rounded-lg 
+    <div className="md:hidden lg:flex xl:w-1/3 xl:justify-center"> 
+    <Link href = "/" className=" bg-othertan w-10 h-10 rounded-lg 
         items-center justify-center flex font-bold shadow-md"> 
     <span className="text-white mr-1 items-center "> DG  </span>
     </Link>
      
     </div>   
-
-    <div className="">
+{/* SOCIAL MEDIA ICONS */}
+    <div className="hidden md:flex gap-4 w-1/3">
       <Link href = "https://github.com/DariusGuillaume">
       <Image src ="/github.png" alt="github" width={30} height={30} />
       </Link>

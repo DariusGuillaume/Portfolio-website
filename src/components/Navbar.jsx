@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import {useState} from 'react'
-
+import Image from 'next/image'
 
 const links = [
 {url: '/', title: 'Home'},
@@ -18,8 +18,14 @@ const Navbar = () => {
   const [open,setOpen] = useState(false);
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48"> 
+<div className='hidden md:flex gap-4'>
+    {links.map((link) => (
+      <Link href ={link.url} key ={link.title}> {link.title} </Link>  ))}
+        
+</div>
+   
     {/* LOGO */}
-    <div className=""> 
+    <div className="md:hidden"> 
     <Link href = "/" className=" bg-sandtan w-10 h-10 rounded-lg 
         items-center justify-center flex font-bold shadow-md"> 
     <span className="text-white mr-1 items-center "> DG  </span>
@@ -27,8 +33,14 @@ const Navbar = () => {
      
     </div>   
 
+    <div className="">
+      <Link href = "https://github.com/DariusGuillaume">
+      <Image src ="/github.png" alt="github" width={30} height={30} />
+      </Link>
+    </div>
+
    {/* RESPONSIVE MENU */}
-   <div className="">
+   <div className="md:hidden">
         {/* MENU BUTTON */}
         <button
           className="w-10 h-8 flex flex-col justify-between z-50 relative"

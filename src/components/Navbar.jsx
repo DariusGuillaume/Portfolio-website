@@ -36,7 +36,10 @@ const Navbar = () => {
 {/* SOCIAL MEDIA ICONS */}
     <div className="hidden md:flex gap-4 w-1/3">
       <Link href = "https://github.com/DariusGuillaume">
-      <Image src ="/github.png" alt="github" width={30} height={30} />
+      <Image src ="/github.png" alt="github" width={25} height={25} />
+      </Link>
+      <Link href = "https://www.linkedin.com/in/darius-guillaume-483101212/">
+      <Image src ="/linkedin.png" alt="linkedin" width={25} height={25} />
       </Link>
     </div>
 

@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image";
+
 
 
 const Homepage = () => {
@@ -25,7 +28,11 @@ Join me on a journey through code and creativity, where we explore the endless p
 
   </div>
   </div>
-  </div>);
+  </div>
+
+  )
+  
+  ;
 };
 
 export default Homepage;

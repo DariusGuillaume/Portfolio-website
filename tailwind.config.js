@@ -19,6 +19,9 @@ module.exports = {
           leafgreen: '#8d8741',
           otherblue: '#2d545e',
           othertan: '#e1b382',
+          cosmicPurple: '#4B0082', 
+          nebulaBlue: '#4169E1',    
+          galacticGarnet: '#C0C0C0', 
 
 
       },

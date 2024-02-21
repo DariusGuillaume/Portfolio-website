@@ -12,6 +12,7 @@ const items = [
     desc: "Explore the decentralized world of blockchain technology with an innovative DApp. Discover the power of smart contracts and decentralized finance.",
     img: "https://images.pexels.com/photos/5980856/pexels-photo-5980856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     link: "/",
+    itemgithubLink: "/",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const items = [
     desc: "Indulge in an exquisite time with an exclusive pizza shop site. Explore amazing food from curated resturants.",
     img: "https://images.pexels.com/photos/7142968/pexels-photo-7142968.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     link: "/",
+    itemgithubLink: "https://github.com/DariusGuillaume/pizza-site",
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const items = [
     desc: "Immerse yourself in the world of cars. Discover new releases, classics, and personalized recommendations.",
     img: "https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     link: "/",
+    itemgithubLink: "/",
   },
   {
     id: 4,
@@ -36,6 +39,7 @@ const items = [
     desc: "Experience the ultimate music streaming platform with the Spotify app. Explore millions of songs, playlists, and podcasts tailored to your taste.",
     img: "https://assets.materialup.com/uploads/bc3aa35b-e13d-4c3f-addd-8883c89ddd2c/attachment.png",
     link: "/",
+    itemgithubLink: "/",
   },
 ];
 
@@ -61,26 +65,40 @@ const ProjectsPage = () => {
           <motion.div style={{ x }} className="flex">
             <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-cosmicPurple to-nebulaBlue" />
             {items.map((item) => (
-              <div
-                className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
-                key={item.id}
-              >
-                <div className="flex flex-col gap-8 text-white">
-                  <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">
-                    {item.title}
-                  </h1>
-                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
-                    <Image src={item.img} alt=""  fill />
-                  </div>
-                  <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
-                    {item.desc}
-                  </p>
-                  <Link href={item.link} className="flex justify-end">
-                    <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">See Demo</button>
-                  </Link>
-                </div>
-              </div>
-            ))}
+  <div
+    className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
+    key={item.id}
+  >
+    <div className="flex flex-col gap-8 text-white">
+      <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">
+        {item.title}
+      </h1>
+      <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
+        <Image src={item.img} alt="" fill />
+      </div>
+      <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
+        {item.desc}
+      </p>
+      <div className="flex justify-end">
+        <Link href={item.link}>
+          <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
+            See Demo
+          </button>
+        </Link>
+        <a
+          href={item.itemgithubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-black text-white font-semibold m-4 rounded">
+            See Code
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+))}
+
           </motion.div>
         </div>
       </div>

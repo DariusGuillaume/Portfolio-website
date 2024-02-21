@@ -1,9 +1,20 @@
-// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   images: {
-    domains: ['images.pexels.com', 'assets.materialup.com'], // Add the new domain here
+    loader: "custom",
+    loaderFile: "./loader.js",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.pexels.com",
+      },
+      {
+        protocol: "https",
+        hostname: "assets.materialup.com",
+      },
+      // Add additional sites here if needed
+    ],
   },
 };
-
 export default nextConfig;

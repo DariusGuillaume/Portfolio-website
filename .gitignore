@@ -3,3 +3,10 @@ node_modules/
 
 #local env
 .env
+
+#firebase 
+firebase.json
+firebase-debug.log
+.firebaserc
+.firebase
+

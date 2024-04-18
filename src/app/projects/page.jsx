@@ -8,11 +8,11 @@ const items = [
   {
     id: 1,
     color: "from-cosmicPurple to-nebulaBlue",
-    title: "BlockChain DApp",
-    desc: "Explore the decentralized world of blockchain technology with an innovative DApp. Discover the power of smart contracts and decentralized finance.",
-    img: "https://images.pexels.com/photos/5980856/pexels-photo-5980856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    link: "/",
-    itemgithubLink: "/",
+    title: "Legal Website",
+    desc: "Explore the world of legal documents and notary services. Discover the best legal services and notary tech solutions for your business",
+    img: "https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg",
+    link: "https://vlt.solutions/",
+    itemgithubLink: "https://github.com/DariusGuillaume/notary-tech",
   },
   {
     id: 2,
@@ -35,11 +35,11 @@ const items = [
   {
     id: 4,
     color: "from-lime-300 to-nebula",
-    title: "Spotify Music App",
-    desc: "Experience the ultimate music streaming platform with the Spotify app. Explore millions of songs, playlists, and podcasts tailored to your taste.",
-    img: "https://assets.materialup.com/uploads/bc3aa35b-e13d-4c3f-addd-8883c89ddd2c/attachment.png",
+    title: "Real Estate Platform",
+    desc: "Discover the best real estate properties in the market. Explore new listings, exclusive deals, and personalized recommendations.",
+    img: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     link: "/",
-    itemgithubLink: "/",
+    itemgithubLink: "https://github.com/DariusGuillaume/rental-website",
   },
 ];
 

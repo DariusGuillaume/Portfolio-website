@@ -3,7 +3,6 @@ import Link from 'next/link'
 import {useState} from 'react'
 import NavLink from './NavLink';
 import {motion} from 'framer-motion'
-
 const links = [
   {url: '/', title: 'Home'},
   {url: '/about', title: 'About'},
@@ -11,25 +10,20 @@ const links = [
   {url: '/contact', title: 'Contact'},
   {url: '/services', title: 'Services'},
 ];
-
 const Navbar = () => {
   const [open,setOpen] = useState(false);
-
   const topVariants = {
     closed: {rotate: 0,},
     opened: {rotate:45, backgroundColor: "rgb(255,255,255)"}
   };
-
   const centerVariants = {
     closed: {opacity:1,},
     opened: {opacity:0}
   };
-
   const bottomVariants = {
     closed: {rotate: 0,},
     opened: {rotate: -45, backgroundColor: "rgb(255,255,255)"}
   };
-
   const listVariants = {
     closed: {
       x: "100vw",
@@ -42,7 +36,6 @@ const Navbar = () => {
       },
     },
   };
-
   const listItemVariants = {
     closed: {
       x: -10,
@@ -53,7 +46,6 @@ const Navbar = () => {
       opacity: 1,
     },
   };
-
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
       {/* LOGO */}
@@ -62,14 +54,12 @@ const Navbar = () => {
           DG
         </Link>
       </div>
-
       {/* NAVLINKS */}
       <div className="hidden md:flex gap-8">
         {links.map((link) => (
           <NavLink link={link} key={link.title} />
         ))}
       </div>
-
       {/* RESPONSIVE MENU */}
       <div className="md:hidden">
         {/* MENU BUTTON */}
@@ -93,7 +83,6 @@ const Navbar = () => {
             className="w-10 h-1 bg-black rounded origin-left"
           ></motion.div>
         </button>
-
         {/* MENU */}
         {open && (
           <motion.div
@@ -115,5 +104,4 @@ const Navbar = () => {
     </div>
   );
 };
-
 export default Navbar;
